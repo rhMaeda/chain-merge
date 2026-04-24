@@ -25,21 +25,14 @@
 html,
 body,
 #root {
+  height: 100%;
+  min-height: 100%;
   margin: 0;
-  width: 100%;
 }
 
 body {
   min-height: 100vh;
   overflow: hidden;
-}
-
-html.inline-html,
-body.inline-body,
-#root.inline-root {
-  height: auto !important;
-  min-height: 0 !important;
-  overflow: hidden !important;
 }
 
 button {
@@ -52,7 +45,8 @@ p {
   margin: 0;
 }
 
-.app-shell {
+.app-shell,
+.splash-shell {
   height: 100vh;
   height: 100dvh;
   min-height: 100dvh;
@@ -60,14 +54,6 @@ p {
   padding: 10px;
   position: relative;
   overflow-x: hidden;
-}
-
-.splash-shell {
-  width: 100%;
-  min-height: 0;
-  padding: 10px;
-  position: relative;
-  overflow: hidden;
 }
 
 .app-shell--playfield {
@@ -110,10 +96,8 @@ p {
 }
 
 .splash-shell--compact {
-  height: auto;
   min-height: auto;
-  max-width: 100%;
-  padding: 10px;
+  padding: 12px;
 }
 
 .splash-card {
@@ -121,8 +105,8 @@ p {
 }
 
 .splash-card--compact {
-  width: min(460px, 100%);
-  padding: 16px 16px 14px;
+  width: min(520px, 100%);
+  padding: 18px;
   text-align: center;
 }
 
@@ -426,20 +410,9 @@ p {
 
 .chain-hint,
 .status-text,
-.splash-note,
-.splash-meta {
+.splash-note {
   color: var(--muted);
   line-height: 1.45;
-}
-
-.splash-meta {
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
-
-.splash-note {
-  margin-top: 8px;
-  font-size: 0.88rem;
 }
 
 .status-text--compact {
@@ -602,8 +575,7 @@ p {
 }
 
 .splash-button {
-  margin-top: 10px;
-  min-width: 180px;
+  margin-top: 6px;
 }
 
 .splash-pills {
