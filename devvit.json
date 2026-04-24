@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "chain-merge-x",
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "inline": true,
+        "entry": "splash.html",
+        "height": "regular"
+      },
+      "game": {
+        "entry": "game.html",
+        "height": "tall"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "permissions": {
+    "reddit": true,
+    "redis": true
+  },
+  "menu": {
+    "items": [
+      {
+        "label": "Create Chain Merge",
+        "description": "Publish a playable Chain Merge post",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/post-create"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "dev": {
+    "subreddit": "chain_merge_x_dev"
+  }
+}

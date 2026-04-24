@@ -1,0 +1,35 @@
+{
+  "name": "chain-merge-x",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.2.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "deploy": "npm run type-check && devvit upload",
+    "dev": "devvit playtest",
+    "launch": "npm run deploy && devvit publish",
+    "login": "devvit login",
+    "type-check": "tsc --noEmit -p tsconfig.client.json && tsc --noEmit -p tsconfig.server.json"
+  },
+  "dependencies": {
+    "@devvit/start": "0.12.20",
+    "@devvit/web": "0.12.20",
+    "@hono/node-server": "2.0.0",
+    "devvit": "0.12.20",
+    "hono": "4.12.14",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "25.6.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.1",
+    "typescript": "6.0.3",
+    "vite": "8.0.9"
+  },
+  "license": "BSD-3-Clause"
+}

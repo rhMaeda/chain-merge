@@ -1,0 +1,7 @@
+dist
+node_modules
+.devvit
+*.log
+npm-debug.log*
+yarn-error.log*
+
